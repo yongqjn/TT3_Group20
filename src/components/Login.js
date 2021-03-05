@@ -4,6 +4,7 @@ import InvalidInput from "./InvalidInput"
 
 function Login({checkLogin, isLoggedIn}) {
   
+  const axios = require("axios");
   const account = {
     username: "Group20",
     password: "IF8v6jPuIsQFJ7i"
@@ -31,17 +32,6 @@ function Login({checkLogin, isLoggedIn}) {
     console.log(UserName);
     console.log(PassWord);
   };
-
-  // useEffect(()=>{
-  //   axios.get(`https://jsonplaceholder.typicode.com/posts/${submit}`)
-  //   .then(response=>{
-  //       alert(response.data.title)
-  //   })
-  //   .catch(error=>{
-  //       console.log(error)
-  //   })
-
-  // },[submit])
 
   return (
     <div>
