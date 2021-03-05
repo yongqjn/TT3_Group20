@@ -13,6 +13,7 @@ function App() {
       {!isLoggedIn ? 
       <Login 
         checkLogin={setLoggedIn}
+        isLoggedIn = {isLoggedIn}
       /> : <Detailform />}
     </div>
   );

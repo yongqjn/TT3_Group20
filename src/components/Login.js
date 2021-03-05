@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import InvalidInput from "./InvalidInput"
 
-function Login({checkLogin}) {
+function Login({checkLogin, isLoggedIn}) {
+  
+  const account = {
+    username: "Group20",
+    password: "IF8v6jPuIsQFJ7i"
+  }
 
   const [UserName, setUserName] = useState("");
   const [PassWord, setPassWord] = useState("");
@@ -19,7 +25,9 @@ function Login({checkLogin}) {
   const onSubmit = (e) => {
     e.preventDefault();
     setSubmit(UserName);
-    checkLogin(true);
+    if(UserName == account.username && PassWord == account.password){
+      checkLogin(true);
+    }
     console.log(UserName);
     console.log(PassWord);
   };
@@ -55,6 +63,9 @@ function Login({checkLogin}) {
             value={PassWord}
             onChange={(e) => PassWordHandler(e.target.value)}
           />
+        </div>
+        <div>
+          {!isLoggedIn && <InvalidInput message={"Please enter valid login details"} />}
         </div>
         <input type="submit" value="Submit" onClick={onSubmit}></input>
       </form>
