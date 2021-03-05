@@ -6,6 +6,7 @@ import UserInformation from "./components/UserInformation"
 import CurrentPrice from "./components/CurrentPrice"
 import HistoricalPrice from "./components/HistoricalPrice"
 import TransactionHistory from "./components/TransactionHistory"
+import WalletBalance from "./components/WalletBalance"
 
 function App() {
   const [accountKey, setaccountKey] = useState("");
@@ -16,6 +17,7 @@ function App() {
       <h1>Welcome to DBS Seed</h1>
       <CurrentPrice/>
       {!(accountKey === "") && <TransactionHistory accountKey = {accountKey}/>}
+      {!(accountKey === "") && <WalletBalance accountKey = {accountKey}/>}
       {!isLoggedIn ? 
       <Login 
         checkLogin={setLoggedIn}
