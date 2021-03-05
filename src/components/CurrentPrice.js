@@ -15,7 +15,7 @@ const CurrentPrice = () => {
     
         let res = await axios(config);
         setcurrprice(res.data.price)
-        console.log(res.data);
+        //console.log(res.data);
 
       }
     

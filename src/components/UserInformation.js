@@ -26,7 +26,7 @@ const UserInformation = ({accountKey, setaccountKey}) => {
     };
 
     let res = await axios(config);
-    console.log(res.data);
+    //console.log(res.data);
     setaccountKey(res.data.accountKey);
     setaddress(res.data.address);
     setemail(res.data.email);
