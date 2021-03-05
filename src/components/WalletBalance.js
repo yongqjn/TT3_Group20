@@ -17,7 +17,7 @@ const WalletBalance = ({accountKey}) => {
         };
         
         let res = await axios(config);
-        console.log(res.data);
+        //console.log(res.data);
         setAssetbal(res.data.assetBalance);
         setCashbal(res.data.cashBalance);
 

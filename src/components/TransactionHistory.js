@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from "axios"
 
 const TransactionHistory = ({accountKey}) => {
-    const[transactionHistory, settransactionHistory] = useState()
+    const [responses, setResponses] = useState()
+    const [transactionHistory, settransactionHistory] = useState()
 
     async function makeRequest() {
         const config = {
@@ -16,19 +17,26 @@ const TransactionHistory = ({accountKey}) => {
         }
     
         let res = await axios(config);
-        console.log(res.data);
-
+        //console.log(res.data);
+        return res.data
       }
-      //makeRequest();
 
       useEffect(() => {
-          makeRequest();
+         setResponses(makeRequest());
+         console.log(responses);
 
       }, [accountKey])
 
     return (
         <div>
-            <h2>Transaction History: ${transactionHistory}</h2>
+            <h2>Transaction History ${transactionHistory}</h2>
+            {/* {
+                responses.map((item)=>(
+                    <ul key= {item.timestamp}>
+                        orderType: ${item.orderType}    Asset Amount: ${item.assetAmount}
+                    </ul>
+                ))
+            } */}
         </div>
     )
 }
