@@ -25,7 +25,7 @@ function Login({checkLogin, isLoggedIn}) {
   const onSubmit = (e) => {
     e.preventDefault();
     setSubmit(UserName);
-    if(UserName == account.username && PassWord == account.password){
+    if(UserName === account.username && PassWord === account.password){
       checkLogin(true);
     }
     console.log(UserName);

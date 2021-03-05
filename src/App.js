@@ -2,6 +2,7 @@ import "./App.css";
 import Detailform from "./components/Detailform";
 import Login from "./components/Login";
 import React from 'react';
+import UserInformation from "./components/UserInformation"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
       <h1>Welcome to DBS Seed</h1>
+      <UserInformation/>
       {!isLoggedIn ? 
       <Login 
         checkLogin={setLoggedIn}
