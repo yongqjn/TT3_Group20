@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios"
 
+
+
 const TransactAsset = ({accountKey}) => {
     const [purchase, setpurchase] = useState(true);
     const [purchaseValue, setpurchaseValue] = useState(1);

@@ -20,11 +20,11 @@ function App() {
       <CurrentPrice />
       {!(accountKey === "") && <TransactionHistory accountKey={accountKey} />}
       {!(accountKey === "") && <WalletBalance accountKey={accountKey} />}
-      {!(accountKey === "") && (
+      {/* {!(accountKey === "") && (
         <TransactAsset
           accountKey={accountKey}
         />
-      )}
+      )} */}
       {!isLoggedIn ? (
         <Login checkLogin={setLoggedIn} isLoggedIn={isLoggedIn} />
       ) : (
