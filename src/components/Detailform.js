@@ -1,6 +1,5 @@
 import React from "react";
 import InvalidInput from "./InvalidInput";
-import UploadImage from "./UploadImage";
 
 function Detailform() {
 
@@ -72,8 +71,6 @@ function Detailform() {
         ></input>
         <br></br>
         {!branchCodeValidity && <InvalidInput message={"Please enter a valid branch code"} />}
-        <br></br>
-        <UploadImage />
         <br></br>
         <label>Product Type: </label>
         <input name="Product Type"></input>
